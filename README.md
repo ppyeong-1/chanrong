@@ -1,0 +1,207 @@
+[index.html](https://github.com/user-attachments/files/23166647/index.html)
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>缠绒旧时光旧时光 - 缠花绒绒花饰品</title>
+    <!-- Tailwind CSS v3 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- AOS - Animate On Scroll -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8B0000', // 中国红
+                        secondary: '#D4AF37', // 金色
+                        light: '#F5F5DC', // 米白色
+                        dark: '#333333', // 深灰色
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        serif: ['"Noto Serif SC"', 'serif'],
+                    },
+                    backgroundImage: {
+                        'paper-texture': "url('https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/super_tool/8f4a6d7ce5784b68a920da035909a91e~tplv-a9rns2rl98-image.image?rcl=202510272109494E56E4D0E472ED5533CD&rk3s=8e244e95&rrcfp=f06b921b&x-expires=1764162627&x-signature=xGmLiTfSdI1cNdq3JC%2F743eWhu0%3D')",
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            }
+            .hover-scale {
+                transition: transform 0.3s ease;
+            }
+            .hover-scale:hover {
+                transform: scale(1.05);
+            }
+            .glass-effect {
+                background: rgba(255, 255, 255, 0.2);
+                backdrop-filter: blur(8px);
+                -webkit-backdrop-filter: blur(8px);
+                border: 1px solid rgba(255, 255, 255, 0.3);
+            }
+            .chinese-pattern {
+                background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238b0000' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            }
+        }
+        
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background-color: #F5F5DC;
+            color: #333333;
+        }
+        
+        .banner {
+            background-image: url('https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/super_tool/8f4a6d7ce5784b68a920da035909a91e~tplv-a9rns2rl98-image.image?rcl=202510272109494E56E4D0E472ED5533CD&rk3s=8e244e95&rrcfp=f06b921b&x-expires=1764162627&x-signature=xGmLiTfSdI1cNdq3JC%2F743eWhu0%3D');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .product-card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-card img {
+            transition: transform 0.5s ease;
+        }
+        
+        .product-card:hover img {
+            transform: scale(1.05);
+        }
+        
+        .cart-item {
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+        
+        .ai-recommendation {
+            background: linear-gradient(135deg, #F5F5DC 0%, #F8F8E8 100%);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #8B0000;
+            border-radius: 3px;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #6b0000;
+        }
+    </style>
+</head>
+<body class="chinese-pattern">
+    <!-- 导航栏 -->
+    <nav class="bg-light shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    < img src="https://p9-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/super_tool/74bb3b53b2aa43708efbfa97e2010a25~tplv-a9rns2rl98-image.image?rcl=202510272109494E56E4D0E472ED5533CD&rk3s=8e244e95&rrcfp=f06b921b&x-expires=1764162620&x-signature=Dv6EROGLCJ5tsC5QXeyHmGN903w%3D" alt="缠绒旧时光" class="h-12 w-12">
+                    <span class="text-2xl font-serif font-bold text-primary">缠绒旧时光</span>
+                </div>
+                
+                <!-- 桌面导航菜单 -->
+                <div class="hidden md:flex space-x-8">
+                    <a href=" " class="text-dark hover:text-primary transition-colors font-medium">首页</a >
+                    <a href="#products" class="text-dark hover:text-primary transition-colors font-medium">商品</a >
+                    <a href="#ai-recommend" class="text-dark hover:text-primary transition-colors font-medium">AI推荐</a >
+                    <a href="#about" class="text-dark hover:text-primary transition-colors font-medium">关于我们</a >
+                </div>
+                
+                <!-- 移动端菜单按钮 -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-dark focus:outline-none">
+                        <i class="fa fa-bars text-xl"></i>
+                    </button>
+                </div>
+                
+                <!-- 用户操作 -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <div class="relative">
+                        <input type="text" placeholder="搜索商品..." class="pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        <i class="fa fa-search absolute left-3 top-3 text-gray-400"></i>
+                    </div>
+                    <button class="relative text-dark hover:text-primary transition-colors">
+                        <i class="fa fa-heart text-xl"></i>
+                        <span class="absolute -top-2 -right-2 bg-primary text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
+                    </button>
+                    <button id="cart-toggle" class="relative text-dark hover:text-primary transition-colors">
+                        <i class="fa fa-shopping-cart text-xl"></i>
+                        <span id="cart-count" class="absolute -top-2 -right-2 bg-primary text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">2</span>
+                    </button>
+                    <button class="text-dark hover:text-primary transition-colors">
+                        <i class="fa fa-user text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- 移动端导航菜单 -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-2">
+                <a href="#" class="block py-2 text-dark hover:text-primary">首页</a >
+                <a href="#products" class="block py-2 text-dark hover:text-primary">商品</a >
+                <a href="#ai-recommend" class="block py-2 text-dark hover:text-primary">AI推荐</a >
+                <a href="#about" class="block py-2 text-dark hover:text-primary">关于我们</a >
+                <div class="relative mt-2">
+                    <input type="text" placeholder="搜索商品..." class="w-full pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                    <i class="fa fa-search absolute left-3 top-3 text-gray-400"></i>
+                </div>
+                <div class="flex justify-around mt-3">
+                    <button class="relative text-dark hover:text-primary">
+                        <i class="fa fa-heart text-xl"></i>
+                        <span class="absolute -top-2 -right-2 bg-primary text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
+                    </button>
+                    <button id="mobile-cart-toggle" class="relative text-dark hover:text-primary">
+                        <i class="fa fa-shopping-cart text-xl"></i>
+                        <span class="absolute -top-2 -right-2 bg-primary text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">2</span>
+                    </button>
+                    <button class="text-dark hover:text-primary">
+                        <i class="fa fa-user text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- 购物车侧边栏 -->
+    <div id="cart-sidebar" class="fixed top-0 right-0 h-full w-80 bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-50">
+        <div class="p-4 border-b">
+            <div class="flex justify-between items-center">
+                <h2 class="text-xl font-bold text-primary">购物车</h2>
+                <button id="close-cart" class="text-gray-500 hover:text-primary">
+                    <i class="fa fa-times text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="cart-items" class="p-4 h-[calc(100vh-180px)] overflow-y-auto custom-scrollbar">
+            <!-- 购物车商品1 -->
+            <div
